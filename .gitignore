@@ -54,3 +54,6 @@ $RECYCLE.BIN/
 ### Custom ###
 # Webpack build directory
 build/
+
+# Config file with private stuff.
+config.private.js
