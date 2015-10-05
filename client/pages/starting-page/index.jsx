@@ -3,6 +3,10 @@ import qs from 'qs';
 
 import { Grid, Col, Row, Jumbotron, Thumbnail } from 'react-bootstrap';
 
+import WeatherReportItem from '../../components/weather-report-item';
+import WeatherReportHeader from '../../components/weather-report-header';
+import WeatherReportDetails from '../../components/weather-report-details';
+
 export default class StartingPage extends Component {
 
   static propTypes = {
@@ -38,19 +42,18 @@ export default class StartingPage extends Component {
           sm={4}
           key={pastReport.sol}>
         <Thumbnail>
-          {JSON.stringify(pastReport)}
+          <WeatherReportItem report={pastReport} />
         </Thumbnail>
-      </Col>);
+      </Col>
+    );
 
     return (
       <article>
         <Jumbotron>
-          <Grid>
-            <h3>Sol {current.sol} <small>{new Date(current.terrestrialdate).toLocaleDateString(navigator.language)}</small></h3>
-
-            <p></p>
-          </Grid>
+          <WeatherReportHeader report={current} />
         </Jumbotron>
+
+        <WeatherReportDetails report={current} />
 
         <Grid>
           <h3>Past reports</h3>
