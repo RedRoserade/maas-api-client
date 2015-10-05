@@ -10,7 +10,7 @@ export default {
   },
   tasks: {
     dataSynchronization: {
-      period: 24 * 60 * 60 // 24 Hours.
+      period: 24 * 60 * 60 * 1000 // 24 Hours.
     }
   }
 };

@@ -10,7 +10,7 @@ weatherReportRouter.get('/', (req, res) => {
     endDate = new Date()
   } = req.query;
 
-  db.query('select * from WeatherReports where terrestrialDate between $1 and $2', [
+  db.query('select * from WeatherReports where terrestrialDate between $1 and $2 order by sol desc', [
     new Date(startDate),
     new Date(endDate)
   ])
