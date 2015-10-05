@@ -44,7 +44,7 @@ export default function synchronizeData() {
     })
     .catch(err => console.error(`Error:`, err, err.stack))
     .then(() => {
-      console.log(`Next run: ${new Date(Date.now() + dataSynchronization.period)}`);
+      console.log(`Next run: ${new Date(Date.now() + dataSynchronization.period).toISOString()}`);
       setTimeout(synchronizeData, dataSynchronization.period);
     });
 }
