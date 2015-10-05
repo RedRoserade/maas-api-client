@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import qs from 'qs';
 
+import { ListGroup, ListGroupItem } from 'react-bootstrap';
+
 /**
  * Fetches weather reports between 2 dates.
  */
@@ -27,8 +29,14 @@ export default class PastReportsPage extends Component {
   }
 
   render() {
-    const data = this.props.data.archive;
+    const data = this.props.data.archive.reports;
 
-    return <span>Hi this is the past reports page, data is {JSON.stringify(data)}</span>;
+    const reportHtml = data.map(r =>
+      <ListGroupItem key={r.sol}>
+        {JSON.stringify(r)}
+      </ListGroupItem>
+    );
+
+    return <ListGroup>{reportHtml}</ListGroup>;
   }
 }

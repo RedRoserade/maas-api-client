@@ -5,7 +5,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 
 injectTapEventPlugin();
 
-import 'style!./styles/style.css';
+import 'style!css!bootstrap/dist/css/bootstrap.css';
 
 import routes from './routes';
 
