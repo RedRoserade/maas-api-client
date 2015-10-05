@@ -44,6 +44,7 @@
   "scripts": {
     "babel-node": "babel-node --ignore node_modules",
     "server-dev-watch": "nodemon --exec npm run babel-node -- server/app.js",
-    "webpack-dev-server": "node dev-server.js"
+    "webpack-dev-server": "node dev-server.js",
+    "import-data": "babel-node server/tasks/import-past-reports.js"
   }
 }
