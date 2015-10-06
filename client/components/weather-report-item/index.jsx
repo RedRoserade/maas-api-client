@@ -1,5 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 
+import { Link } from 'react-router';
+
+/**
+ * Shows basic information about a weather report.
+ */
 export default class WeatherReportItem extends Component {
 
   static propTypes = {
@@ -11,7 +16,11 @@ export default class WeatherReportItem extends Component {
 
     return (
       <div className='text-center'>
-        <h4>{report.weather}, ~ {(report.mintemp + report.maxtemp) / 2} <abbr title='Degrees Celsius'>ºC</abbr></h4>
+        <Link
+            to='reportPage'
+            params={{ sol: report.sol }}>
+          <h4>{report.weather}, <abbr title='Average'>~</abbr> {(report.mintemp + report.maxtemp) / 2} <abbr title='Degrees Celsius'>ºC</abbr></h4>
+        </Link>
 
         <p className='text-muted'>Sol {report.sol}</p>
       </div>

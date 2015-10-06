@@ -3,6 +3,8 @@ import qs from 'qs';
 
 import { Grid, Col, Row, Jumbotron, Thumbnail } from 'react-bootstrap';
 
+import { Link } from 'react-router';
+
 import WeatherReportItem from '../../components/weather-report-item';
 import WeatherReportHeader from '../../components/weather-report-header';
 import WeatherReportDetails from '../../components/weather-report-details';
@@ -55,12 +57,14 @@ export default class StartingPage extends Component {
 
         <WeatherReportDetails report={current} />
 
-        <Grid>
-          <h3>Past reports</h3>
-          <Row>
-            {pastReportsHtml}
-          </Row>
-        </Grid>
+        <section>
+          <Grid>
+            <h3>Past reports <small><Link to='archive'>(See past reports)</Link></small></h3>
+            <Row>
+              {pastReportsHtml}
+            </Row>
+          </Grid>
+        </section>
       </article>
     );
   }

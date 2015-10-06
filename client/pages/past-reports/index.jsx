@@ -11,6 +11,9 @@ function getWeatherReports({ startDate = new Date(), endDate = new Date() } = {}
     .then(res => res.json());
 }
 
+/**
+ * Page which will show past weather reports.
+ */
 export default class PastReportsPage extends Component {
 
   static propTypes = {

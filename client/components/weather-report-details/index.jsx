@@ -2,6 +2,10 @@ import React, { Component, PropTypes } from 'react';
 
 import { Grid, Row, Col } from 'react-bootstrap';
 
+/**
+ * Shows the remaining details about a weather report,
+ * such as wind speed, humidity, and so on.
+ */
 export default class WeatherReportDetails extends Component {
 
   static propTypes = {

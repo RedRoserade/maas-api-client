@@ -2,6 +2,10 @@ import React, { Component, PropTypes } from 'react';
 
 import { Grid, Row, Col } from 'react-bootstrap';
 
+/**
+ * The header for a weather report.
+ * Displays the main information, such as the date and temperature.
+ */
 export default class WeatherReportHeader extends Component {
 
   static propTypes = {
