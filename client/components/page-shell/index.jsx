@@ -45,7 +45,7 @@ export default class PageShell extends Component {
 
           <Nav right>
             <NavItemLink
-                to='reportPage'
+                to='startingPage'
                 params={{ sol: data.sol }}>
               Latest report: {data.weather}, <abbr title='Average'>~</abbr> {(data.mintemp + data.maxtemp) / 2} <abbr title='Degrees Celsius'>ºC</abbr>
           </NavItemLink>
